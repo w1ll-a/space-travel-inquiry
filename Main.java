@@ -16,4 +16,9 @@ public class Main
 		}
 		return null;
 	}
+	
+	public static void main(String[] args){
+		Main m = new Main();
+		System.out.println("HI THERE");
+	}
 }

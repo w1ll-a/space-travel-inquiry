@@ -20,5 +20,4 @@ public class Info
 	public String getInfo{
 		return info;
 	}
- 
 }
