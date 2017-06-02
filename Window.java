@@ -2,8 +2,10 @@ import javax.swing.*;
 
 public class Window extends JFrame implements ActionListener
 {
+	private JFrame frame;
+	
 	public Window(int x, int y, String title){
-		JFrame frame = new JFrame(title);
+		frame = new JFrame(title);
 		frame.setSize(x, y);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setDefaultLookAndFeelDecorated(true);
@@ -22,15 +24,19 @@ public class Window extends JFrame implements ActionListener
 		JTextArea headerText = new JTextArea("The History of Space Travel");
 		header.add(headerText);
 		
+		JButton earlyTravel = new JButton("Early Space Travel");
+		earlyTravel.addActionListener(new ActionListener{
+			public void actionPerformed(ActionEvent e){
+				InfoWindow earlyInfo = new InfoWindow(800, 600, "Early Space Travel");
+				
+				earlyInfo.setText(eTrav.addInfo(Main.eTrav));
+			}
+		})
+		
 		this.add(header);
 		this.add(gl);
 		
 		this.pack();
 		this.setVisible(true);
   }
-	
-	public void actionPerformed(ActionEvent e){
-		InfoWindow iw = new InfoWindow(800, 600);
-		iw.addInfo();
-	}
 }

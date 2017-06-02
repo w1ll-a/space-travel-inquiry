@@ -1,4 +1,4 @@
-public class InfoWindow extents Window
+public class InfoWindow extends Window
 {
   public InfoWindow(int x, int y, String title){
     super(x, y, title);
@@ -15,6 +15,6 @@ public class InfoWindow extents Window
 	}
   
   public void addInfo(Info i){
-    tf.setText(i.getInfo());
+    tf.setText(Main.search(i.getQuery()));
   }
 }
