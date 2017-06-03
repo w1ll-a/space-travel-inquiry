@@ -1,13 +1,15 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class Window extends JFrame implements ActionListener
 {
     protected JFrame frame;
     Info early = Data.earlyTrav;
+    Info cold = Data.coldWar;
 
     public Window(int x, int y, String title){
         frame = new JFrame(title);
@@ -18,26 +20,50 @@ public class Window extends JFrame implements ActionListener
         frame.setPreferredSize(new Dimension(1000, 800));
 
         JPanel header = new JPanel(new BorderLayout());
-        JPanel gl = new JPanel(new GridLayout(2, 3));
+        JPanel glp = new JPanel();
+        GridLayout gl = new GridLayout(2, 6);
+        glp.setLayout(gl);
 
         JLabel headerText = new JLabel("The History of Space Travel");
         header.add(headerText);
-
+//-----------------------------------buttons---------------------------------------
         JButton earlyTravel = new JButton("Early Space Travel");
         earlyTravel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
-                InfoWindow earlyInfo = new InfoWindow(800, 600, "Early Space Travel");
+                InfoWindow earlyInfo = new InfoWindow("Early Space Travel");
 
                 earlyInfo.setText(early.getInfo());
                 earlyInfo.addImg(early);
             }
         });
 
-        gl.add(earlyTravel);
+
+        JButton coldWar = new JButton("Cold War Space Travel");
+        coldWar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InfoWindow coldWarInfo = new InfoWindow("Cold War Space Travel");
+
+                coldWarInfo.setText(cold.getInfo());
+                coldWarInfo.addImg(cold);
+            }
+        });
+
+        JButton b = new JButton("test");
+
+        JButton c = new JButton("test2");
+//---------------------------------------------------------------------------------
+
+        glp.add(earlyTravel);
+        glp.add(coldWar);
+        glp.add(b);
+        glp.add(c);
+
+        gl.setVgap(20);
 
         frame.add(header);
-        frame.add(gl);
+        frame.add(glp);
 
         frame.pack();
         frame.setVisible(true);
