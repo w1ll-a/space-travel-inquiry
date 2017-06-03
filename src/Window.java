@@ -52,15 +52,4 @@ public class Window extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent e) {
         System.out.println("-");
     }
-
-    public Image getScaledImage(Image i, int w, int h){
-        BufferedImage newImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2 = newImg.createGraphics();
-
-        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-        g2.drawImage(i, 0, 0, w, h, null);
-        g2.dispose();
-
-        return newImg;
-    }
 }

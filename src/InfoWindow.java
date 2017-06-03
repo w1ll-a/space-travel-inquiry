@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -34,8 +33,6 @@ public class InfoWindow
                 frame.dispose();
             }
         });
-
-        //JLabel pic = new JLabel(new ImageIcon("C:\\Users\\William\\Documents\\GitHub\\space-travel-inquiry\\media\\dad sleeping 1 final.png"));
 
         frame.add(bl, BorderLayout.NORTH);
         frame.add(box, BorderLayout.PAGE_END);
