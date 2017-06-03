@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class Info
 {
-    private String query, filePath, info;
+    private String query, info;
 
-    public Info(String query, String filePath){
+    public Info(String query, String info){
         this.query = query;
-        this.filePath = filePath;
+        this.info = info;
 
     }
 

@@ -6,7 +6,6 @@ public class Main
 
     public Main(){
         Window w = new Window(1000, 800, "Space Travel Inquiry");
-        w.format();
     }
 
     public void addToList(Info i){

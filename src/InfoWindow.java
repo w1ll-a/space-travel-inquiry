@@ -1,29 +1,42 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class InfoWindow extends Window
+public class InfoWindow
 {
-    private JTextField tf;
+    private JFrame frame;
+    private static JLabel l = new JLabel();
 
     public InfoWindow(int x, int y, String title){
-        super(x, y, title);
-    }
+        frame = new JFrame(title);
 
-    public void format(){
+        frame.setPreferredSize(new Dimension(800, 600));
+        frame.setDefaultLookAndFeelDecorated(true);
+
         JPanel bl = new JPanel(new BorderLayout());
-        tf = new JTextField();
+
         JButton done = new JButton("Done");
+        done.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+            }
+        });
 
         frame.add(bl);
-        bl.add(tf, BorderLayout.NORTH);
+        bl.add(l, BorderLayout.NORTH);
         bl.add(done, BorderLayout.SOUTH);
+
+        frame.pack();
+        frame.setVisible(true);
     }
 
     public void setText(String text){
-        tf.setText(text);
+        l.setText(text);
     }
 
-    public void addInfo(Info i){
-        tf.setText(i.getInfo());
+    public static void addInfo(Info i){
+        l.setText(i.getInfo());
     }
 }
