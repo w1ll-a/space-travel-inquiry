@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,17 +7,27 @@ import java.awt.event.ActionListener;
 public class InfoWindow
 {
     private JFrame frame;
-    private static JLabel l = new JLabel();
+    private static JTextArea jt = new JTextArea(2, 20);
+    private JPanel bl;
 
     public InfoWindow(int x, int y, String title){
         frame = new JFrame(title);
 
-        frame.setPreferredSize(new Dimension(800, 600));
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setDefaultLookAndFeelDecorated(true);
+        frame.setPreferredSize(new Dimension(800, 600));
 
-        JPanel bl = new JPanel(new BorderLayout());
+        jt.setWrapStyleWord(true);
+        jt.setEditable(false);
+        jt.setLineWrap(true);
+
+        bl = new JPanel(new BorderLayout());
+        JPanel box = new JPanel();
+        box.setLayout(new BoxLayout(box, BoxLayout.PAGE_AXIS));
 
         JButton done = new JButton("Done");
+        done.setPreferredSize(new Dimension(40, 30));
+        done.setAlignmentX(Component.CENTER_ALIGNMENT);
         done.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -24,19 +35,29 @@ public class InfoWindow
             }
         });
 
-        frame.add(bl);
-        bl.add(l, BorderLayout.NORTH);
-        bl.add(done, BorderLayout.SOUTH);
+        //JLabel pic = new JLabel(new ImageIcon("C:\\Users\\William\\Documents\\GitHub\\space-travel-inquiry\\media\\dad sleeping 1 final.png"));
+
+        frame.add(bl, BorderLayout.NORTH);
+        frame.add(box, BorderLayout.PAGE_END);
+        bl.add(jt, BorderLayout.NORTH);
+        box.add(done);
 
         frame.pack();
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
     }
 
     public void setText(String text){
-        l.setText(text);
+        jt.setText(text);
+    }
+
+    public void addImg(Info i){
+        if (i.getLabel() != null){
+            bl.add(i.getLabel());
+        }
     }
 
     public static void addInfo(Info i){
-        l.setText(i.getInfo());
+        jt.setText(i.getInfo());
     }
 }

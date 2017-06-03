@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 
 public class Window extends JFrame implements ActionListener
 {
@@ -29,6 +30,7 @@ public class Window extends JFrame implements ActionListener
                 InfoWindow earlyInfo = new InfoWindow(800, 600, "Early Space Travel");
 
                 earlyInfo.setText(early.getInfo());
+                earlyInfo.addImg(early);
             }
         });
 
@@ -39,6 +41,7 @@ public class Window extends JFrame implements ActionListener
 
         frame.pack();
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
     }
 
     public void changeSize(int x, int y){
@@ -48,5 +51,16 @@ public class Window extends JFrame implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e) {
         System.out.println("-");
+    }
+
+    public Image getScaledImage(Image i, int w, int h){
+        BufferedImage newImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = newImg.createGraphics();
+
+        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        g2.drawImage(i, 0, 0, w, h, null);
+        g2.dispose();
+
+        return newImg;
     }
 }
