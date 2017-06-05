@@ -8,9 +8,9 @@ Essential Question: To what extent were scientists successful in advancing space
  
 Thesis statement: Scientists were very successful in advancing space travel to its fullest potential, as America won the space race to the moon, programs sending unmanned flights to the outer solar system were successful, and future plans are in place to send unmanned flights to other galaxies.
 
-SOURCES
 ____
- 
+SOURCES
+
 USH in context: http://ic.galegroup.com/ic/uhic/searchResults/actionWin?scanId=CSH&query=OQE+space+travel&prodId=UHIC&p=UHIC%3AWHIC&mode=view&catId=&u=colc95696&totalSearchResultCount=1931&limiter=&contentModules=&displayGroups=&display-query=OQE+space+travel&action=e&windowstate=normal&activityType=BasicSearch&resetBreadCrumb=true&failOverType=&commentary= 
  
 Cassini:
