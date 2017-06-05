@@ -8,8 +8,8 @@ import java.io.IOException;
 public class Window extends JFrame implements ActionListener
 {
     protected JFrame frame;
-    Info early = Data.earlyTrav;
-    Info cold = Data.coldWar;
+    /*Info early = Data.earlyTrav;
+    Info cold = Data.coldWar;*/
 
     public Window(int x, int y, String title){
         frame = new JFrame(title);
@@ -17,24 +17,32 @@ public class Window extends JFrame implements ActionListener
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setDefaultLookAndFeelDecorated(true);
 
-        frame.setPreferredSize(new Dimension(1000, 800));
+        frame.setPreferredSize(new Dimension(1200, 900));
 
         JPanel header = new JPanel(new BorderLayout());
         JPanel glp = new JPanel();
+        JPanel fill1 = new JPanel();
+        JPanel fill2 = new JPanel();
         GridLayout gl = new GridLayout(2, 6);
         glp.setLayout(gl);
 
-        JLabel headerText = new JLabel("The History of Space Travel");
+        JLabel headerText = new JLabel("The History of Space Travel", SwingConstants.CENTER);
+        headerText.setFont((new Font("Trajan Pro", Font.PLAIN, 30)));
         header.add(headerText);
+
 //-----------------------------------buttons---------------------------------------
         JButton earlyTravel = new JButton("Early Space Travel");
+        earlyTravel.setBackground(Color.GRAY);
+        earlyTravel.setForeground(Color.WHITE);
+        earlyTravel.setFocusPainted(false);
+
         earlyTravel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e){
                 InfoWindow earlyInfo = new InfoWindow("Early Space Travel");
 
-                earlyInfo.setText(early.getInfo());
-                earlyInfo.addImg(early);
+                earlyInfo.addInfo(Data.earlyTrav);
+                earlyInfo.getFrame().add(new ImagePanel("media\\vostok1launch.jpg"));
             }
         });
 
@@ -45,26 +53,31 @@ public class Window extends JFrame implements ActionListener
             public void actionPerformed(ActionEvent e) {
                 InfoWindow coldWarInfo = new InfoWindow("Cold War Space Travel");
 
-                coldWarInfo.setText(cold.getInfo());
-                coldWarInfo.addImg(cold);
+                coldWarInfo.addInfo(Data.coldWar);
+                coldWarInfo.getFrame().add(new ImagePanel("media\\usmoonlanding.jpg"));
             }
         });
 
         JButton b = new JButton("test");
 
         JButton c = new JButton("test2");
+
+        JButton d = new JButton("test3");
 //---------------------------------------------------------------------------------
 
         glp.add(earlyTravel);
         glp.add(coldWar);
         glp.add(b);
         glp.add(c);
+        glp.add(d);
 
-        gl.setVgap(20);
+        gl.setVgap(100);
+        gl.setHgap(100);
 
         frame.add(header, BorderLayout.PAGE_START);
-        frame.add(glp);
-
+        frame.add(fill1, BorderLayout.LINE_START);
+        frame.add(fill2, BorderLayout.LINE_END);
+        frame.add(glp, BorderLayout.CENTER);
         frame.pack();
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);

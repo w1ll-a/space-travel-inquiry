@@ -5,9 +5,10 @@ import java.awt.event.ActionListener;
 
 public class InfoWindow
 {
-    private JFrame frame;
+    private static JFrame frame;
     private static JTextArea jt = new JTextArea(2, 20);
-    private JPanel bl;
+    private static JPanel bl;
+    private JPanel box = new JPanel();
 
     public InfoWindow(String title){
         frame = new JFrame(title);
@@ -21,7 +22,7 @@ public class InfoWindow
         jt.setLineWrap(true);
 
         bl = new JPanel(new BorderLayout());
-        JPanel box = new JPanel(new BoxLayout(box, BoxLayout.PAGE_AXIS));
+        box.setLayout(new BoxLayout(box, BoxLayout.PAGE_AXIS));
         
         JButton done = new JButton("Done");
         done.setPreferredSize(new Dimension(40, 30));
@@ -54,8 +55,6 @@ public class InfoWindow
         jt.setEditable(false);
         jt.setLineWrap(true);
 
-        bl = new JPanel(new BorderLayout());
-        JPanel box = new JPanel();
         box.setLayout(new BoxLayout(box, BoxLayout.PAGE_AXIS));
 
         JButton done = new JButton("Done");
@@ -82,13 +81,14 @@ public class InfoWindow
         jt.setText(text);
     }
 
-    public void addImg(Info i){
-        if (i.getLabel() != null){
-            bl.add(i.getLabel());
-        }
-    }
-
     public static void addInfo(Info i){
         jt.setText(i.getInfo());
+        /*ImagePanel ip = new ImagePanel(i.getPath());
+        frame.add(ip);*/
     }
+
+    public JFrame getFrame(){
+        return frame;
+    }
+
 }
