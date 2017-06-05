@@ -21,7 +21,7 @@ public class InfoWindow
         jt.setLineWrap(true);
 
         bl = new JPanel(new BorderLayout());
-        JPanel box = new JPanel(new BoxLayout(box, BoxLayout.PAGE_AXIS);
+        JPanel box = new JPanel(new BoxLayout(box, BoxLayout.PAGE_AXIS));
         
         JButton done = new JButton("Done");
         done.setPreferredSize(new Dimension(40, 30));
