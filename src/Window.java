@@ -14,7 +14,7 @@ public class Window extends JFrame implements ActionListener
     public Window(int x, int y, String title){
         frame = new JFrame(title);
 
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setDefaultLookAndFeelDecorated(true);
 
         frame.setPreferredSize(new Dimension(1000, 800));
@@ -62,7 +62,7 @@ public class Window extends JFrame implements ActionListener
 
         gl.setVgap(20);
 
-        frame.add(header);
+        frame.add(header, BorderLayout.PAGE_START);
         frame.add(glp);
 
         frame.pack();
