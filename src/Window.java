@@ -62,7 +62,7 @@ public class Window extends JFrame implements ActionListener
 
         gl.setVgap(20);
 
-        frame.add(header);
+        frame.add(header, BorderLayout.PAGE_START);
         frame.add(glp);
 
         frame.pack();
