@@ -58,7 +58,19 @@ public class Window extends JFrame implements ActionListener
             }
         });
 
-        JButton b = new JButton("test");
+        JButton sources = new JButton("Sources");
+        sources.setBackground(Color.GRAY);
+        sources.setForeground(Color.WHITE);
+        sources.setFocusPainted(false);
+        
+        sources.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InfoWindow sources = new InfoWindow("Sources");
+                
+                sources.addInfo(Data.sources);
+            }
+        });
 
         JButton c = new JButton("test2");
 
@@ -67,12 +79,13 @@ public class Window extends JFrame implements ActionListener
 
         glp.add(earlyTravel);
         glp.add(coldWar);
-        glp.add(b);
         glp.add(c);
         glp.add(d);
+        
+        glp.add(sources);
 
-        gl.setVgap(100);
-        gl.setHgap(100);
+        gl.setVgap(80);
+        gl.setHgap(80);
 
         frame.add(header, BorderLayout.PAGE_START);
         frame.add(fill1, BorderLayout.LINE_START);
@@ -89,6 +102,6 @@ public class Window extends JFrame implements ActionListener
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("-");
+        System.out.print("-");
     }
 }
