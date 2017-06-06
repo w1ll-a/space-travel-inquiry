@@ -5,7 +5,7 @@ public class Main
     private static ArrayList<Info> list = new ArrayList<Info>();
 
     public Main(){
-        Window w = new Window(1000, 800, "Space Travel Inquiry");
+        Window w = new Window(1200, 900, "Space Travel Inquiry");
     }
 
     public void addToList(Info i){

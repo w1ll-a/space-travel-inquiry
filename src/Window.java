@@ -1,15 +1,11 @@
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 
 public class Window extends JFrame implements ActionListener
 {
     protected JFrame frame;
-    /*Info early = Data.earlyTrav;
-    Info cold = Data.coldWar;*/
 
     public Window(int x, int y, String title){
         frame = new JFrame(title);
@@ -17,7 +13,7 @@ public class Window extends JFrame implements ActionListener
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setDefaultLookAndFeelDecorated(true);
 
-        frame.setPreferredSize(new Dimension(1200, 900));
+        frame.setPreferredSize(new Dimension(x, y));
 
         JPanel header = new JPanel(new BorderLayout());
         JPanel glp = new JPanel();
@@ -48,6 +44,10 @@ public class Window extends JFrame implements ActionListener
 
 
         JButton coldWar = new JButton("Cold War Space Travel");
+        coldWar.setBackground(Color.GRAY);
+        coldWar.setForeground(Color.WHITE);
+        coldWar.setFocusPainted(false);
+
         coldWar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
