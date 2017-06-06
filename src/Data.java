@@ -20,7 +20,7 @@ public class Data {
                     "rather than manned space travel, so they tasked their scientists with designing a space station capable of housing multiple astronauts.");
     
     public static Info sources = new Info(
-            "SOURCES\nUSH in context: http://ic.galegroup.com/ic/uhic/searchResults/actionWin?scanId=CSH&query=OQE+space+travel&prodId=UHIC&p=UHIC%3AWHIC&mode=view&catId=&u=colc95696&totalSearchResultCount=1931&limiter=&contentModules=&displayGroups=&display-query=OQE+space+travel&action=e&windowstate=normal&activityType=BasicSearch&resetBreadCrumb=true&failOverType=&commentary=""
+            "SOURCES\nUSH in context: http://ic.galegroup.com/ic/uhic/searchResults/actionWin?scanId=CSH&query=OQE+space+travel&prodId=UHIC&p=UHIC%3AWHIC&mode=view&catId=&u=colc95696&totalSearchResultCount=1931&limiter=&contentModules=&displayGroups=&display-query=OQE+space+travel&action=e&windowstate=normal&activityType=BasicSearch&resetBreadCrumb=true&failOverType=&commentary="
             +
             "\nCassini: https://www.nasa.gov/mission_pages/cassini/main/index.html https://saturn.jpl.nasa.gov/legacy/files/Cassini_Grand_Finale_Fact_Sheet_508.pdf"
             +
