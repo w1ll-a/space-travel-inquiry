@@ -8,6 +8,7 @@ public class InfoWindow
     private static JFrame frame;
     private static JTextArea jt = new JTextArea(2, 20);
     private static JPanel bl;
+    private static JScrollPane scroll = new JScrollPane(jt);
     private JPanel box = new JPanel();
 
     public InfoWindow(String title){
@@ -20,6 +21,7 @@ public class InfoWindow
         jt.setWrapStyleWord(true);
         jt.setEditable(false);
         jt.setLineWrap(true);
+        jt.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 
         bl = new JPanel(new BorderLayout());
         box.setLayout(new BoxLayout(box, BoxLayout.PAGE_AXIS));
@@ -54,7 +56,9 @@ public class InfoWindow
         jt.setWrapStyleWord(true);
         jt.setEditable(false);
         jt.setLineWrap(true);
+        jt.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 
+        bl = new JPanel(new BorderLayout());
         box.setLayout(new BoxLayout(box, BoxLayout.PAGE_AXIS));
 
         JButton done = new JButton("Done");
@@ -83,8 +87,6 @@ public class InfoWindow
 
     public static void addInfo(Info i){
         jt.setText(i.getInfo());
-        /*ImagePanel ip = new ImagePanel(i.getPath());
-        frame.add(ip);*/
     }
 
     public JFrame getFrame(){

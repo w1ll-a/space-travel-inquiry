@@ -54,7 +54,7 @@ public class Window extends JFrame implements ActionListener
                 InfoWindow coldWarInfo = new InfoWindow("Cold War Space Travel");
 
                 coldWarInfo.addInfo(Data.coldWar);
-                coldWarInfo.getFrame().add(new ImagePanel("media\\usmoonlanding.jpg"));
+                coldWarInfo.getFrame().add(new ImagePanel("media\\usmoonlanding.jpg"), BoxLayout.Y_AXIS);
             }
         });
 
@@ -66,7 +66,7 @@ public class Window extends JFrame implements ActionListener
         sources.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                InfoWindow sources = new InfoWindow("Sources");
+                InfoWindow sources = new InfoWindow(1200, 900, "Sources");
                 
                 sources.addInfo(Data.sources);
             }
