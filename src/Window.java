@@ -31,6 +31,7 @@ public class Window extends JFrame implements ActionListener
         earlyTravel.setBackground(Color.GRAY);
         earlyTravel.setForeground(Color.WHITE);
         earlyTravel.setFocusPainted(false);
+        earlyTravel.setFont(new Font("Times New Roman", Font.BOLD, 18));
 
         earlyTravel.addActionListener(new ActionListener() {
             @Override
@@ -47,6 +48,7 @@ public class Window extends JFrame implements ActionListener
         coldWar.setBackground(Color.GRAY);
         coldWar.setForeground(Color.WHITE);
         coldWar.setFocusPainted(false);
+        coldWar.setFont(new Font("Times New Roman", Font.BOLD, 18));
 
         coldWar.addActionListener(new ActionListener() {
             @Override
@@ -62,6 +64,7 @@ public class Window extends JFrame implements ActionListener
         sources.setBackground(Color.GRAY);
         sources.setForeground(Color.WHITE);
         sources.setFocusPainted(false);
+        sources.setFont(new Font("Times New Roman", Font.BOLD, 18));
         
         sources.addActionListener(new ActionListener() {
             @Override
