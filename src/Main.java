@@ -12,13 +12,6 @@ public class Main
         list.add(i);
     }
 
-    public static Info search(String query){
-        for(Info i : list){
-            if (i.getQuery() == query) return i;
-        }
-        return null;
-    }
-
     public static void main(String[] args){
         Main m = new Main();
     }
