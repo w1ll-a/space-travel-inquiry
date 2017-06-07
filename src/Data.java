@@ -40,8 +40,8 @@ public class Data {
                 "about Saturn's surface and send it back to Earth, which it did. In 2017, just recently, the Grand Finale phase began, ending its 20 year journey with dangerous passes " +
                 "between Saturn and its rings to collect more data before it inevitable plunged into Saturn's atmosphere." +
                 "\n\tThanks to Cassini, it was discovered that Titan, one of Saturn's moons, has lakes, rivers, oceans, and rain. Its atmosphere is thickly shrouded in nitrogen. Saturn's rings " +
-	    	    "are also called \"a laboratory for how planets or moons form\", meaning that scientists predict that moons and planets are formed by collisions between space debris, until a " +
-	    	    "large planet is formed."
+	    	"are also called \"a laboratory for how planets or moons form\", meaning that scientists predict that moons and planets are formed by collisions between space debris, until a " +
+	    	"large planet is formed."
             );
     
     public static Info columbiaDisaster = new Info(
@@ -56,8 +56,17 @@ public class Data {
     public static Info juno = new Info(
             "\tJuno, named after Greek mythology where Juno parted the clouds and revealed Jupiter, is a space craft sent to Jupter to retrieve data about its atmosphere, moons, and origins. Launched on August 5, 2011, " +
                 "it arrived at Jupiter in July 2016 and is planned to orbit Jupiter for 20 months, or until February 2018. Jupiter is known to have an intense magnetoshpere, which experts believe is caused by " +
-                "the pressure in its environment causing hydrogen gas to be turned into metallic hydrogen, which acts as an electrically conductive metal. Jupiter
-                );
+                "the pressure in its environment causing hydrogen gas to be turned into metallic hydrogen, which acts as an electrically conductive metal. Jupiter gets its appearance from the ammonia in its atmosphere, " +
+                "and has a storm on its surface known as the Great Red Spot that has been raging on for more than 150 years. In the storm, which is an area of high atmospheric pressure causing jet streams creating " +
+                "an anticyclone the size of two Earths. Scientists believe that learning more about the Great Red Spot could help us, in turn, learn more about Earth's weather patterns. 
+            );
+	
+    public static Info future = new Info(
+            "\tScientists are starting to set their eyes on interstellar space travel, or space travel to a new solar system or star. Alpha Centauri, the closest solar system to our own, is 4.4 light years away, or 6 trillion miles. " +
+                "To accomplish this feat, scientists want to design a craft that could travel at a fraction of the speed of light. However, it would take decades to reach its destination, and decelerating it would be difficult, " +
+                "so scientists are holding off on the project until an efficient method of deceleration is discovered. The craft would be, obviously, unmanned, but it would have sensors and instruments so that we could receive " +
+                "information on the planets that reside in the system."
+            );
     
     public static Info sources = new Info(
             "USH in context: http://ic.galegroup.com/ic/uhic/searchResults/actionWin?scanId=CSH&query=OQE+space+travel&prodId=UHIC&p=UHIC%3AWHIC&mode=view&catId=&u=colc95696&totalSearchResultCount=1931&limiter=&contentModules=&displayGroups=&display-query=OQE+space+travel&action=e&windowstate=normal&activityType=BasicSearch&resetBreadCrumb=true&failOverType=&commentary="
