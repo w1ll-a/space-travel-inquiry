@@ -88,7 +88,7 @@ public class Window extends JFrame implements ActionListener
                 InfoWindow cassini = new InfoWindow("Cassini Space Program");
                 
                 cassini.addInfo(Data.cassini);
-                cassini.getFrame().add(new ImagePanel("media\\cassini.jpg");
+                cassini.getFrame().add(new ImagePanel("media\\cassini.jpg"));
             }
         });
         
@@ -96,7 +96,7 @@ public class Window extends JFrame implements ActionListener
         columbia.setBackground(Color.GRAY);
         columbia.setForeground(Color.WHITE);
         columbia.setFocusPainted(false);
-        columbia.setFont(new Font("Times New Roman", Font.BOLD, 18);
+        columbia.setFont(new Font("Times New Roman", Font.BOLD, 18));
         
         columbia.addActionListener(new ActionListener() {
             @Override
@@ -104,7 +104,7 @@ public class Window extends JFrame implements ActionListener
                 InfoWindow columbia = new InfoWindow("The Columbia Disaster");
                 
                 columbia.addInfo(Data.columbiaDisaster);
-                columbia.getFrame().add(new ImagePanel("media\\columbiadisaster.jpg");
+                columbia.getFrame().add(new ImagePanel("media\\columbiadisaster.jpg"));
             }
         });
         
@@ -112,7 +112,7 @@ public class Window extends JFrame implements ActionListener
         juno.setBackground(Color.GRAY);
         juno.setForeground(Color.WHITE);
         juno.setFocusPainted(false);
-        juno.setFont(new Font("Times New Roman", Font.BOLD, 18);
+        juno.setFont(new Font("Times New Roman", Font.BOLD, 18));
         
         juno.addActionListener(new ActionListener() {
             @Override
@@ -120,7 +120,23 @@ public class Window extends JFrame implements ActionListener
                 InfoWindow juno = new InfoWindow("Juno Space Program");
                 
                 juno.addInfo(Data.juno);
-                juno.getFrame().add(new ImagePanel("media\\juno.jpg");
+                juno.getFrame().add(new ImagePanel("media\\juno.jpg"));
+            }
+        });
+        
+        JButton future = new JButton("The Future of Space Travel");
+        future.setBackground(Color.GRAY);
+        future.setForeground(Color.WHITE);
+        future.setFocusPainted(false);
+        future.setFont(new Font("Times New Roman", Font.BOLD, 18));
+        
+        future.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InfoWindow future = new InfoWindow("The Future of Space Travel");
+                
+                future.addInfo(Data.future);
+                future.getFrame().add(new ImagePanel(""));
             }
         });
 
@@ -148,6 +164,7 @@ public class Window extends JFrame implements ActionListener
         glp.add(cassini);
         glp.add(columbia);
         glp.add(juno);
+        glp.add(future);
         
         glp.add(sources);
 
