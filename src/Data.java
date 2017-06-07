@@ -17,7 +17,7 @@ public class Data {
                 "support, and later in 1958 the government authorized the creation of the National Aeronautics and Space Agency (NASA). The Space Race ultimately ended with the US moon " +
                 "landing, where Neil Armstrong and Edwin “Buzz” Aldrin became the first men on the moon, and were returned to Earth safely as promised in Kennedy’s speech. However, what " +
                 "the US put in time and money into getting to the moon and back, Soviet Union put into space stations. The Soviet government wanted to focus on space flight for spying " +
-                "rather than manned space travel, so they tasked their scientists with designing a space station capable of housing multiple astronauts. The Soviet Union was also having "
+                "rather than manned space travel, so they tasked their scientists with designing a space station capable of housing multiple astronauts. The Soviet Union was also having " +
                 "political power struggles. This combined with the lack of government funding makes for an unsuccessful combination.");
     
     public static Info spaceShuttle = new Info(
@@ -40,9 +40,24 @@ public class Data {
                 "about Saturn's surface and send it back to Earth, which it did. In 2017, just recently, the Grand Finale phase began, ending its 20 year journey with dangerous passes " +
                 "between Saturn and its rings to collect more data before it inevitable plunged into Saturn's atmosphere." +
                 "\n\tThanks to Cassini, it was discovered that Titan, one of Saturn's moons, has lakes, rivers, oceans, and rain. Its atmosphere is thickly shrouded in nitrogen. Saturn's rings " +
-	    	"are also called \"a laboratory for how planets or moons form\", meaning that scientists predict that moons and planets are formed by collisions between space debris, until a " +
-	    	"large planet is formed."
+	    	    "are also called \"a laboratory for how planets or moons form\", meaning that scientists predict that moons and planets are formed by collisions between space debris, until a " +
+	    	    "large planet is formed."
             );
+    
+    public static Info columbiaDisaster = new Info(
+            "\tOn February 1st, 2003, the space shuttle Columbia broke up in reentry into the Earth's atmosphere, leaving all 7 astronauts on board dead. According to the investigation, the " +
+                "failure was caused by a piece of insulation falling off the fuel tank at takeoff, which damaged the left wing. This caused some of the heat-resistant tiles to get stripped from " +
+                "the ship during reentry. This caused the ship to break apart due to the massive amounts of friction heat generated from the Earth's atmosphere." +
+                "\n\tThe disaster brought up questions about management in NASA, as the space shuttle Columbia was the oldest shuttle still flying and had experienced problems in 20 of its 28 " +
+                "flights. It had nearly had a similar disaster in 1999 because of faulty wiring, but it was hushed up and dismissed. This disaster made people question the future of the space program " +
+                "as a whole, because funding and trust would be lacking after the incident."
+            );
+    
+    public static Info juno = new Info(
+            "\tJuno, named after Greek mythology where Juno parted the clouds and revealed Jupiter, is a space craft sent to Jupter to retrieve data about its atmosphere, moons, and origins. Launched on August 5, 2011, " +
+                "it arrived at Jupiter in July 2016 and is planned to orbit Jupiter for 20 months, or until February 2018. Jupiter is known to have an intense magnetoshpere, which experts believe is caused by " +
+                "the pressure in its environment causing hydrogen gas to be turned into metallic hydrogen, which acts as an electrically conductive metal. Jupiter
+                );
     
     public static Info sources = new Info(
             "USH in context: http://ic.galegroup.com/ic/uhic/searchResults/actionWin?scanId=CSH&query=OQE+space+travel&prodId=UHIC&p=UHIC%3AWHIC&mode=view&catId=&u=colc95696&totalSearchResultCount=1931&limiter=&contentModules=&displayGroups=&display-query=OQE+space+travel&action=e&windowstate=normal&activityType=BasicSearch&resetBreadCrumb=true&failOverType=&commentary="
