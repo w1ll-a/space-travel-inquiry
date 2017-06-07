@@ -56,7 +56,39 @@ public class Window extends JFrame implements ActionListener
                 InfoWindow coldWarInfo = new InfoWindow("Cold War Space Travel");
 
                 coldWarInfo.addInfo(Data.coldWar);
-                coldWarInfo.getFrame().add(new ImagePanel("media\\usmoonlanding.jpg"), BoxLayout.Y_AXIS);
+                coldWarInfo.getFrame().add(new ImagePanel("media\\usmoonlanding.jpg"));
+            }
+        });
+
+        JButton shuttle = new JButton("Space Shuttles");
+        shuttle.setBackground(Color.GRAY);
+        shuttle.setForeground(Color.WHITE);
+        shuttle.setFocusPainted(false);
+        shuttle.setFont(new Font("Times New Roman", Font.BOLD, 18));
+        
+        shuttle.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InfoWindow shuttle = new InfoWindow("Space Shuttles");
+                
+                shuttle.addInfo(Data.spaceShuttle);
+                shuttle.getFrame().add(new ImagePanel("media\\spaceshuttle.jpg"));
+            }
+        });
+        
+        JButton cassini = new JButton("Cassini Space Program");
+        cassini.setBackground(Color.GRAY);
+        cassini.setForeground(Color.WHITE);
+        cassini.setFocusPainted(false);
+        cassini.setFont(new Font("Times New Roman", Font.BOLD, 18));
+        
+        cassini.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InfoWindow cassini = new InfoWindow("Cassini Space Program");
+                
+                cassini.addInfo(Data.cassini);
+                cassini.getFrame().add(new ImagePanel("media\\cassini.jpg");
             }
         });
 
@@ -75,15 +107,13 @@ public class Window extends JFrame implements ActionListener
             }
         });
 
-        JButton c = new JButton("test2");
-
         JButton d = new JButton("test3");
 //---------------------------------------------------------------------------------
 
         glp.add(earlyTravel);
         glp.add(coldWar);
-        glp.add(c);
-        glp.add(d);
+        glp.add(spaceShuttle);
+        glp.add(cassini);
         
         glp.add(sources);
 
