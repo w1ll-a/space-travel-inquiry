@@ -91,6 +91,38 @@ public class Window extends JFrame implements ActionListener
                 cassini.getFrame().add(new ImagePanel("media\\cassini.jpg");
             }
         });
+        
+        JButton columbia = new JButton("The Columbia Failure");
+        columbia.setBackground(Color.GRAY);
+        columbia.setForeground(Color.WHITE);
+        columbia.setFocusPainted(false);
+        columbia.setFont(new Font("Times New Roman", Font.BOLD, 18);
+        
+        columbia.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InfoWindow columbia = new InfoWindow("The Columbia Disaster");
+                
+                columbia.addInfo(Data.columbiaDisaster);
+                columbia.getFrame().add(new ImagePanel("media\\columbiadisaster.jpg");
+            }
+        });
+        
+        JButton juno = new JButton("Juno Space Program");
+        juno.setBackground(Color.GRAY);
+        juno.setForeground(Color.WHITE);
+        juno.setFocusPainted(false);
+        juno.setFont(new Font("Times New Roman", Font.BOLD, 18);
+        
+        juno.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InfoWindow juno = new InfoWindow("Juno Space Program");
+                
+                juno.addInfo(Data.juno);
+                juno.getFrame().add(new ImagePanel("media\\juno.jpg");
+            }
+        });
 
         JButton sources = new JButton("Sources");
         sources.setBackground(Color.GRAY);
@@ -114,6 +146,8 @@ public class Window extends JFrame implements ActionListener
         glp.add(coldWar);
         glp.add(spaceShuttle);
         glp.add(cassini);
+        glp.add(columbia);
+        glp.add(juno);
         
         glp.add(sources);
 
@@ -129,12 +163,8 @@ public class Window extends JFrame implements ActionListener
         frame.setLocationRelativeTo(null);
     }
 
-    public void changeSize(int x, int y){
-        frame.setPreferredSize(new Dimension(x, y));
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.print("-");
+        System.out.print("Action Performed");
     }
 }
