@@ -37,9 +37,11 @@ public class Data {
             "\tThe Cassini program was a program designed to collect data about Saturn, more specifically its surface and atmosphere, as well as its moons. Cassini was the largest constructed " +
                 "interplanetary exploration device ever constructed by NASA. It launched October 15, 1997, and reached Saturn on June 30th, 2004. It remained in orbit of Saturn for another 10 " +
                 "years, collecting data and sending it back to Earth. On December 24, 2005, the Huygens probe was released and fell to Saturn's surface. The probe was designed to collect data " +
-                "about Saturn's surface and send it back to Earth, which it did. In 2017, just recently, the Grand Finale phase began, where Cassini plunged into Saturn's atmosphere, ending " +
-                "its 20 year journey." +
-                "\n\t"
+                "about Saturn's surface and send it back to Earth, which it did. In 2017, just recently, the Grand Finale phase began, ending its 20 year journey with dangerous passes " +
+                "between Saturn and its rings to collect more data before it inevitable plunged into Saturn's atmosphere." +
+                "\n\tThanks to Cassini, it was discovered that Titan, one of Saturn's moons, has lakes, rivers, oceans, and rain. Its atmosphere is thickly shrouded in nitrogen. Saturn's rings " +
+	    	"are also called \"a laboratory for how planets or moons form\", meaning that scientists predict that moons and planets are formed by collisions between space debris, until a " +
+	    	"large planet is formed."
             );
     
     public static Info sources = new Info(
