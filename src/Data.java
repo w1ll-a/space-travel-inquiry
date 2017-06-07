@@ -53,13 +53,11 @@ public class Data {
                 "as a whole, because funding and trust would be lacking after the incident."
             );
     
-    public static Info juno = new Info(
-            "\tJuno, named after Greek mythology where Juno parted the clouds and revealed Jupiter, is a space craft sent to Jupter to retrieve data about its atmosphere, moons, and origins. Launched on August 5, 2011, " +
+    public static Info juno = new Info("\tJuno, named after Greek mythology where Juno parted the clouds and revealed Jupiter, is a space craft sent to Jupter to retrieve data about its atmosphere, moons, and origins. Launched on August 5, 2011, " +
                 "it arrived at Jupiter in July 2016 and is planned to orbit Jupiter for 20 months, or until February 2018. Jupiter is known to have an intense magnetoshpere, which experts believe is caused by " +
                 "the pressure in its environment causing hydrogen gas to be turned into metallic hydrogen, which acts as an electrically conductive metal. Jupiter gets its appearance from the ammonia in its atmosphere, " +
                 "and has a storm on its surface known as the Great Red Spot that has been raging on for more than 150 years. In the storm, which is an area of high atmospheric pressure causing jet streams creating " +
-                "an anticyclone the size of two Earths. Scientists believe that learning more about the Great Red Spot could help us, in turn, learn more about Earth's weather patterns. 
-            );
+                "an anticyclone the size of two Earths. Scientists believe that learning more about the Great Red Spot could help us, in turn, learn more about Earth's weather patterns. ");
 	
     public static Info future = new Info(
             "\tScientists are starting to set their eyes on interstellar space travel, or space travel to a new solar system or star. Alpha Centauri, the closest solar system to our own, is 4.4 light years away, or 6 trillion miles. " +

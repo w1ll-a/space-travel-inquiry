@@ -23,7 +23,7 @@ public class Window extends JFrame implements ActionListener
         glp.setLayout(gl);
 
         JLabel headerText = new JLabel("The History of Space Travel", SwingConstants.CENTER);
-        headerText.setFont((new Font("Trajan Pro", Font.PLAIN, 30)));
+        headerText.setFont((new Font("Constantia", Font.PLAIN, 30)));
         header.add(headerText);
 
 //-----------------------------------buttons---------------------------------------
@@ -136,7 +136,7 @@ public class Window extends JFrame implements ActionListener
                 InfoWindow future = new InfoWindow("The Future of Space Travel");
                 
                 future.addInfo(Data.future);
-                future.getFrame().add(new ImagePanel(""));
+                future.getFrame().add(new ImagePanel("media\\galaxy.jpg"));
             }
         });
 
@@ -154,13 +154,11 @@ public class Window extends JFrame implements ActionListener
                 sources.addInfo(Data.sources);
             }
         });
-
-        JButton d = new JButton("test3");
 //---------------------------------------------------------------------------------
 
         glp.add(earlyTravel);
         glp.add(coldWar);
-        glp.add(spaceShuttle);
+        glp.add(shuttle);
         glp.add(cassini);
         glp.add(columbia);
         glp.add(juno);
@@ -168,8 +166,8 @@ public class Window extends JFrame implements ActionListener
         
         glp.add(sources);
 
-        gl.setVgap(80);
-        gl.setHgap(80);
+        gl.setVgap(60);
+        gl.setHgap(60);
 
         frame.add(header, BorderLayout.PAGE_START);
         frame.add(fill1, BorderLayout.LINE_START);
