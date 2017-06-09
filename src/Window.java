@@ -22,7 +22,7 @@ public class Window extends JFrame implements ActionListener
         GridLayout gl = new GridLayout(2, 6);
         glp.setLayout(gl);
 
-        JLabel headerText = new JLabel("The History of Space Travel", SwingConstants.CENTER);
+        JLabel headerText = new JLabel("To what extent were scientists successful in advancing space travel to its fullest potential?", SwingConstants.CENTER);
         headerText.setFont((new Font("Constantia", Font.PLAIN, 30)));
         header.add(headerText);
 
